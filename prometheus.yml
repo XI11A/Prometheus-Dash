@@ -35,3 +35,11 @@ scrape_configs:
 
     static_configs:
       - targets: ['api-be.xi11a.eu.org']
+
+  - job_name: 'xsecurity'
+
+    metrics_path: '/actuator/prometheus'
+    scrape_interval: 5s
+
+    static_configs:
+      - targets: ['xsec.xi11a.eu.org']
